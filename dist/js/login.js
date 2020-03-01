@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(".login button").click(function(){$("#username")[0].value&&$("#password")[0].value?postSend("/login",function(o){1===JSON.parse(o).code?(console.log("登录成功"),window.location.href="../pages/index.html"):($(".login_error").html("<i></i><span>用户或密码错误</span>"),console.log("登录失败"))},"username=".concat($("#username")[0].value,"&password=").concat($("#password")[0].value)):alert("请填写完整信息")});

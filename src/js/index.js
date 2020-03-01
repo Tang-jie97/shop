@@ -64,7 +64,7 @@ function iLunbo() {
             i = -1;
         }
         startLunbo();
-    }, 2000)
+    }, 3000)
 }
 
 /*图片轮播和提示信息*/
@@ -75,3 +75,11 @@ function startLunbo() {
     $(".pic>li").eq(i).fadeIn().siblings().fadeOut();
     $(".num>li").eq(i).addClass("current").siblings().removeClass("current");
 }
+
+// 商品tab
+$('.category-list li').click(function() {
+    var index = $(this).index()
+    console.log($('category-list li'))
+    $('.tab div').eq(index).show()
+    $('.tab div').eq(index).siblings.hide()
+})

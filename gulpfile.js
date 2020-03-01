@@ -123,7 +123,7 @@ const serverHandler = () => {
                     {
                         source: '/gx', //源，你的地址标识符
                         //直接请求下面这个地址拿不到东西，因为跨域了
-                        target: 'http://127.0.0.1/lianxi.php' //目标
+                        target: 'http://127.0.0.1/login.php' //目标
                     }
 
                 ]

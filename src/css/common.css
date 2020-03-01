@@ -13,6 +13,10 @@ input {
     outline: none;
 }
 
+button {
+    outline: none;
+}
+
 a {
     text-decoration: none;
 }

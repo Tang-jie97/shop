@@ -7,7 +7,6 @@
     <title>小米商城</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/common.css">
-
 </head>
 
 <body>
@@ -92,7 +91,11 @@
             <div class="search clearfix">
                 <form action="">
                     <input type="text" name="shop" class="search-text">
-                    <input type="submit" class="search-btn">
+                    <button class="search-btn">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#iconsousuo"></use>
+                        </svg>
+                    </button>
                     <div class="search-word">
                         <a href="#">小米9 Pro 5G</a>
                         <a href="#">Renmi Note 8</a>
@@ -103,18 +106,41 @@
     </div>
     <!-- 主页 -->
     <div class="content">
-        <div class="container"></div>
+        <div class="container">
+            <div class="banner">
+                <ul class="pic">
+                    <li><img src="../images/1.jpg" alt=""></li>
+                    <li><img src="../images/2.jpg" alt=""></li>
+                    <li><img src="../images/3.jpg" alt=""></li>
+                    <li><img src="../images/4.jpg" alt=""></li>
+                    <li><img src="../images/5.jpg" alt=""></li>
+                </ul>
+
+                <ul class="num">
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="left arrow">&lt;</div>
+                <div class="right arrow">&gt;</div>
+            </div>
+        </div>
     </div>
     <!-- 内容 -->
-    <div class="content-list">
-        <div class="container"></div>
+    <div class="content-list ">
+        <div class="container ">
+        </div>
+    </div>
     </div>
     <!-- 尾部 -->
-    <div class="footer">
-        <div class="container"></div>
+    <div class="footer ">
+        <div class="container "></div>
     </div>
-    <script src="../lib/jquery/dist/jquery.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../lib/jquery/dist/jquery.min.js "></script>
+    <script src="../js/index.js "></script>
+    <script src="../js/move.js"></script>
 </body>
 
 </html>

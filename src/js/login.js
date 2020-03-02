@@ -11,7 +11,7 @@ $('.btn').click(function(e) {
             success: function(res) {
                 console.log(res)
                 if (res.code === 1) {
-                    window.location.href = 'http://localhost:8080/pages/index.html';
+                    window.location.href = 'http://localhost:8000/pages/index.html';
                 } else {
                     alert('输入的用户名不存在或密码错误')
                 }

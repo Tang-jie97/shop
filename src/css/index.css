@@ -147,9 +147,10 @@ body {
 .header .nav {
     float: left;
     width: 850px;
+    position: relative;
 }
 
-.header .nav>ul {
+.header .nav-top>ul {
     position: relative;
     width: 1100px;
     height: 88px;
@@ -157,80 +158,78 @@ body {
     font-size: 16px;
 }
 
-.header .nav>ul>.category {
-    position: relative;
+.header .nav-top>ul>li {
     float: left;
-    width: 120px;
-    padding-right: 15px;
 }
 
-.header .nav>ul>.category>.category-list {
-    position: absolute;
-    top: 88px;
-    left: -92px;
-    width: 234px;
-    height: 460px;
-    background: rgba(0, 0, 0, .6);
-    z-index: 10;
+.header .nav-top>ul>li:nth-child(1) {
+    margin-left: 120px;
 }
 
-.category-list>ul {
-    width: 234px;
-    height: 420px;
-    padding: 20px 0;
-}
-
-.category-list>ul>li {
-    height: 42px;
-}
-
-.category-list>ul>li>a {
-    padding-left: 30px;
-    display: block;
-    height: 42px;
-    line-height: 42px;
-    font-size: 14px;
-    color: #fff;
-    position: relative;
-}
-
-.category-list>ul>li>a:hover {
-    background-color: #ff6700;
-}
-
-.category-list>ul span {
-    position: absolute;
-    display: block;
-    top: 12px;
-    right: 20px;
-    font-size: 16px;
-    line-height: 16px;
-}
-
-.tab div {
-    position: absolute;
-    height: 460px;
-    background: #fff;
-    width: 500px;
-    top: 0;
-    left: 234px;
-    border: 1px slid #ccc;
-}
-
-.header .nav>ul>li {
-    float: left;
-    position: relative;
-}
-
-.header .nav>ul>li>a {
+.header .nav-top>ul>li>a {
     display: block;
     padding: 26px 10px 38px;
     color: #333;
 }
 
-.header .nav>ul>li>a:hover {
+.header .nav-top>ul>li>a:hover {
     color: #ff6700;
 }
+
+.nav-box {
+    position: relative;
+    z-index: 99;
+    width: 1226px;
+    left: -62px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-box>ul {
+    display: flex;
+}
+
+.nav-box>ul>li {
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+}
+
+.nav-box>ul>li>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.nav-box div:last-child {
+    border: none;
+}
+
+.nav-box>ul>li>div>img {
+    width: 160px;
+    height: 110px;
+    display: block;
+}
+
+.nav-box p {
+    margin: 0;
+    line-height: 20px;
+}
+
+.nav-box span {
+    margin: 0;
+    display: block;
+    line-height: 20px;
+    color: #ff6700;
+}
+
+
+/* 二级菜单下拉 */
 
 .header .search {
     float: right;
@@ -286,10 +285,17 @@ body {
 }
 
 
-/* 内容 */
+/* 主页 */
+
+.content {
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+    position: relative;
+}
 
 .banner {
-    position: relative;
+    position: absolute;
     width: 1226px;
     height: 460px;
     margin: 0 auto;
@@ -358,4 +364,47 @@ body {
 
 .right {
     right: 0;
+}
+
+.category-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 460px;
+    background: rgba(0, 0, 0, .6);
+    z-index: 10;
+}
+
+.category-list>ul {
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+}
+
+.category-list>ul>li {
+    height: 42px;
+}
+
+.category-list>ul>li>a {
+    padding-left: 30px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+
+.category-list>ul>li>a:hover {
+    background-color: #ff6700;
+}
+
+.category-list>ul span {
+    position: absolute;
+    display: block;
+    top: 12px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
 }

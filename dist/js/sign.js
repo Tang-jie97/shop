@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(".btn").click(function(a){a.preventDefault(),$.ajax({type:"post",url:"/sign",data:{username:$("#username").val(),password:$("#password").val()},dataType:"JSON",success:function(a){console.log(a),0===a.code?alert("该账号已经被注册"):1===a.code&&(alert("注册成功，快去登录吧"),window.location.href="http://localhost:8000/pages/login.html")}})});

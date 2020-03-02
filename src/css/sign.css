@@ -25,7 +25,7 @@ body {
 
 .box input {
     width: 316px;
-    height: 22;
+    height: 22px;
     padding: 13px 14px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -38,4 +38,11 @@ body {
     border: none;
     color: #fff;
     cursor: pointer;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 14px;
+    height: 10px;
 }

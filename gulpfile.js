@@ -114,18 +114,23 @@ const serverHandler = () => {
         return gulp.src('./dist') //找到要打开的的页面的文件夹，吧这个文件夹当做网站根目录
             .pipe(webserver({ //配置项
                 host: 'localhost', //域名，可自定义
-                port: 7070, //端口号，0~65535,尽量不使用0~1023
+                port: 8000, //端口号，0~65535,尽量不使用0~1023
                 open: './pages/index.html', //默认打开的首页
                 livereload: true, //自动刷新浏览器
                 //所有的代理配置都在proxies里面
                 proxies: [
                     //每一个代理配置就是一个对象
                     {
-                        source: '/gx', //源，你的地址标识符
+                        source: '/login', //源，你的地址标识符
                         //直接请求下面这个地址拿不到东西，因为跨域了
-                        target: 'http://127.0.0.1/login.php' //目标
+                        target: 'http://localhost:80/login.php' //目标
+                            //source: '/sign', 
+                            // target: 'http://localhost:80/sign.php' //目标
+                    },
+                    {
+                        source: '/sign',
+                        target: 'http://localhost:80/sign.php'
                     }
-
                 ]
             })) //开启服务器
     }

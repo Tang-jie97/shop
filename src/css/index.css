@@ -450,3 +450,401 @@ body {
     vertical-align: middle;
     margin-right: 5px;
 }
+
+
+/* 向导 */
+
+.sub {
+    width: 1226px;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+.sub-list1 {
+    float: left;
+    width: 234px;
+}
+
+.sub-list1 ul {
+    background: #5f5750;
+    font-size: 12px;
+    text-align: center;
+}
+
+.sub-list1 ul li {
+    float: left;
+    width: 33.3%;
+    height: 85px;
+}
+
+.sub-list1 ul li img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+}
+
+.sub-list1 ul li a {
+    display: block;
+    color: #ccc;
+    padding-top: 18px;
+}
+
+.sub-list2 {
+    float: left;
+    width: 978px;
+    margin-left: 14px;
+}
+
+.sub-list2 ul {
+    width: 992px;
+}
+
+.sub-list2 ul li {
+    float: left;
+    width: 33.3%;
+}
+
+.sub-list2 ul li a {
+    display: block;
+    height: 170px;
+}
+
+.sub-list2 ul li img {
+    display: block;
+    width: 316px;
+    height: 170px;
+}
+
+
+/* 内容 */
+
+.content-desc {
+    background: #f5f5f5;
+    width: 100%;
+    /* height: 1000px; */
+}
+
+.content-desc .home {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.hd {
+    position: relative;
+    height: 58px;
+}
+
+.hd h2 {
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+
+.row {
+    width: 1226px;
+    height: 340px;
+    margin: 0 auto;
+}
+
+.row .count {
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    background: #f1eded;
+    text-align: center;
+    float: left;
+}
+
+.row .count .round {
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 15px;
+}
+
+.row .count .img {
+    margin: 25px auto;
+}
+
+.row .count .desc {
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+}
+
+.row .count .time {
+    width: 168px;
+    margin: 28px auto 0;
+}
+
+.row .count .time span {
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+}
+
+.row .count .time i {
+    width: 15px;
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    font-style: normal;
+}
+
+.content-desc .row ul li {
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    float: right;
+    background: pink;
+}
+
+.row-list {
+    width: 234px;
+    height: 339px;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+    background: #fff;
+}
+
+.row-list a {
+    display: block;
+    height: 300px;
+    padding-top: 39px;
+}
+
+.row-list img {
+    width: 160px;
+    height: 160px;
+}
+
+.row-list h3 {
+    margin: 0 20px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #212121;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.row-list span {
+    color: #ff6700;
+}
+
+.row-list p {
+    height: 18px;
+    margin: 0 20px 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c1 {
+    border-top: 1px solid orange;
+}
+
+.c2 {
+    border-top: 1px solid green;
+}
+
+.c3 {
+    border-top: 1px solid beige;
+}
+
+.c4 {
+    border-top: 1px solid blue;
+}
+
+.content-banner {
+    height: 120px;
+    /* overflow: hidden; */
+}
+
+.content-banner img {
+    width: 1226px;
+    display: block;
+}
+
+
+/* footer */
+
+.footer_top {
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+.footer_top ul {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.footer_top ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    font-size: 17px;
+    color: #666;
+    cursor: pointer;
+}
+
+.footer_top ul li:last-of-type {
+    border-right: none;
+}
+
+.footer_top ul li a {
+    display: block;
+    font-size: 17px;
+    color: #616161;
+}
+
+.footer_top ul li .icon {
+    margin: -2px 4px 0 0;
+    font-size: 24px;
+}
+
+.footer_top ul a:hover {
+    color: #ff6700;
+}
+
+.footer_top div {
+    display: flex;
+}
+
+.footer_top div p {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    font-size: 13px;
+    color: #424242;
+}
+
+.footer_top div p a {
+    margin: 8px 0;
+    font-size: 11px;
+    color: #999;
+}
+
+.footer_top div p a:nth-of-type(1) {
+    margin-top: 30px;
+}
+
+.footer_top div p:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 242px;
+    height: 110px;
+    border-left: 1px solid #e0e0e0;
+    margin-left: 20px;
+}
+
+.footer_top div p:last-of-type span {
+    font-size: 18px;
+    color: #ff6700;
+}
+
+.footer_top div p:last-of-type strong {
+    margin: 10px 0 15px 0;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: #616161;
+    font-weight: normal;
+}
+
+.footer_top div p:last-of-type i {
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid #ff6700;
+    text-align: center;
+    line-height: 30px;
+    transition: all .4s;
+    color: #ff6700;
+}
+
+.footer_top div p:last-of-type i:hover {
+    color: #fff;
+    background-color: #ff6700;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    padding: 34px 62px 0 62px;
+    height: 234px;
+    line-height: 1;
+    background: rgb(250, 250, 250) url(https://s02.mifile.cn/assets/static/image/slogan2016.png) center 200px no-repeat;
+}
+
+footer div p {
+    margin-left: 6px;
+    font-size: 10px;
+    color: #999;
+}
+
+footer div p:nth-of-type(1) {
+    display: flex;
+    line-height: 20px;
+}
+
+footer div p:nth-of-type(1) a {
+    margin: 0 3px;
+    color: #999;
+}
+
+footer div p:nth-of-type(2) {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+footer div p:nth-of-type(2) a {
+    height: 20px;
+    color: #999;
+    line-height: 18px;
+}
+
+footer div p a:hover {
+    color: #ff6b00;
+}
+
+footer div p:last-of-type img {
+    width: 85px;
+}
+
+.fixed {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 25px;
+    height: 42px;
+    border: 1px solid #888;
+    background: url(https://i1.mifile.cn/f/i/2018/home/totop.png) center no-repeat;
+    cursor: pointer;
+}
+
+.fixed:hover {
+    background: url(https://i1.mifile.cn/f/i/2018/home/totop_hover.png) center no-repeat;
+}

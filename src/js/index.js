@@ -77,3 +77,100 @@ window.onload = function() {
         $(".num>li").eq(n).addClass("current").siblings().removeClass("current");
     }
 }
+getList()
+
+function getList() {
+    $.ajax({
+        url: '../lib/nav_top.json',
+        dataType: 'json',
+        success: function(res) {
+            console.log(res)
+            let str = ''
+            res.forEach(item => {
+                str += `<li><a href="#">${ item.name }</a></li>`
+            })
+            $('.nav-top > ul')
+                .html(str)
+                .on({
+                    mouseenter: () => $('.nav-box').stop().slideDown(),
+                    mouseleave: () => $('.nav-box').stop().slideUp()
+                })
+                .children('li')
+                .on('mouseover', function() {
+                    const index = $(this).index()
+                    const list = res[index].list
+                    let str = ''
+                    list.forEach(item => {
+                        str += `
+                            <li>
+                                <div>
+                                    <img src="${ item.list_url }" alt="">
+                                </div>
+                                <p class="title">${ item.list_name }</p>
+                                <span class="price">${ item.list_price }</span>
+                            </li>
+                                `
+                    })
+                    $('.nav-box > ul').html(str)
+                })
+            $('.nav-box')
+                .on({
+                    mouseover: function() {
+                        $(this).finish().show()
+                    },
+                    mouseout: function() {
+                        $(this).finish().slideUp()
+                    }
+                })
+        }
+    })
+}
+
+getChildren()
+
+function getChildren() {
+    $.ajax({
+        url: '../lib/children.json',
+        dataType: 'json',
+        success: function(res) {
+            console.log(res)
+            let str = ''
+            res.forEach(item => {
+                str += ` <li><a href="#">${item.title}<span>&gt;</span></a></li></a></li>`
+            })
+            $('.category-list > ul')
+                .html(str)
+                .on({
+                    mouseenter: () => $('.children').stop().show(),
+                    mouseleave: () => $('.children').stop().hide()
+                })
+            $('.category-list > ul')
+                .children('li')
+                .on('mouseover', function() {
+                    const index = $(this).index()
+                    const list = res[index].list
+                    let str = ''
+                    list.forEach(item => {
+                        str += `
+                            <li>
+                            <a href="#">
+                                    <img src="${ item.url }" alt="">
+                                <span>${ item.name }</span>
+                                </a>
+                            </li>
+                                `
+                    })
+                    $('.children > ul').html(str)
+                })
+            $('.children')
+                .on({
+                    mouseover: function() {
+                        $(this).stop().show()
+                    },
+                    mouseout: function() {
+                        $(this).stop().hide()
+                    }
+                })
+        }
+    })
+}

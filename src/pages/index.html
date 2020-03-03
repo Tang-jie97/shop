@@ -123,16 +123,10 @@
         </div>
         <div class="category-list">
             <ul>
-                <li><a href="#">手机 电话卡<span>&gt;</span></a></li>
-                <li><a href="#">电视 盒子<span>&gt;</span></a></li>
-                <li><a href="#">笔记本 显示器 平板<span>&gt;</span></a></li>
-                <li><a href="#">家电 插线板<span>&gt;</span></a></li>
-                <li><a href="#">出行 穿戴<span>&gt;</span></a></li>
-                <li><a href="#">智能 路由器<span>&gt;</span></a></li>
-                <li><a href="#">电源 配件<span>&gt;</span></a></li>
-                <li><a href="#">健康 儿童<span>&gt;</span></a></li>
-                <li><a href="#">耳机 音响<span>&gt;</span></a></li>
-                <li><a href="#">生活 箱包<span>&gt;</span></a></li>
+            </ul>
+        </div>
+        <div class="children">
+            <ul class="children-list">
             </ul>
         </div>
     </div>
@@ -149,54 +143,6 @@
     <script src="../lib/jquery/dist/jquery.min.js "></script>
     <script src="../js/index.js "></script>
     <script>
-        getList()
-
-        function getList() {
-            $.ajax({
-                url: '../lib/nav_top.json',
-                dataType: 'json',
-                success: function(res) {
-                    console.log(res)
-                    let str = ''
-                    res.forEach(item => {
-                        str += `<li><a href="#">${ item.name }</a></li>`
-                    })
-                    $('.nav-top > ul')
-                        .html(str)
-                        .on({
-                            mouseenter: () => $('.nav-box').stop().slideDown(),
-                            mouseleave: () => $('.nav-box').stop().slideUp()
-                        })
-                        .children('li')
-                        .on('mouseover', function() {
-                            const index = $(this).index()
-                            const list = res[index].list
-                            let str = ''
-                            list.forEach(item => {
-                                str += `
-                                    <li>
-                                        <div>
-                                            <img src="${ item.list_url }" alt="">
-                                        </div>
-                                        <p class="title">${ item.list_name }</p>
-                                        <span class="price">${ item.list_price }</span>
-                                    </li>
-                                        `
-                            })
-                            $('.nav-box > ul').html(str)
-                        })
-                    $('.nav-box')
-                        .on({
-                            mouseover: function() {
-                                $(this).finish().show()
-                            },
-                            mouseout: function() {
-                                $(this).finish().slideUp()
-                            }
-                        })
-                }
-            })
-        }
     </script>
 </body>
 

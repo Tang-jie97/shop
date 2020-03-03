@@ -408,3 +408,45 @@ body {
     font-size: 16px;
     line-height: 16px;
 }
+
+.children {
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 10;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+}
+
+.children ul {
+    height: 458px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.children-list li {
+    width: 200px;
+    height: 76px;
+}
+
+.children a {
+    width: 200px;
+    height: 76px;
+    display: block;
+    text-align: center;
+    line-height: 76px;
+    color: #333;
+}
+
+.children a:hover {
+    color: #ff6700;
+}
+
+.children img {
+    vertical-align: middle;
+    margin-right: 5px;
+}

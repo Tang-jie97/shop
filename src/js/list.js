@@ -92,7 +92,7 @@ function bindHtml(list) {
     list.forEach(item => {
         str += `
             <li>
-            <a href="">
+            <a href="../pages/detail.html">
                 <img src="${ item.url}" alt="">
                 <h3>${item.name}</h3>
                 <p>${ item.price}</p>

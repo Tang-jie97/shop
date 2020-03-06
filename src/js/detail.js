@@ -115,3 +115,44 @@ function getList() {
 $("#ShowPictureBox").JNMagnifier({
     renderTo: "#ShowBigPictureBox"
 });
+
+//渲染购物页面
+const info = JSON.parse(localStorage.getItem('goodsInfo'))
+if (!info) {
+    alert('数据不存在')
+    window.location.href = './list.html'
+}
+bindHtml()
+
+function bindHtml() {
+    $('.buybox img').attr('src', info.url)
+    $('.buybox h3').text(info.name)
+    $('.buybox p').text(info.price)
+}
+
+//添加购物车点击事件
+$('.btn1').click(() => {
+    const cartList = JSON.parse(localStorage.getItem('cartList')) || []
+        //判断有没有数据
+    let exits = cartList.some(item => {
+        return item.id === info.id
+    })
+    if (exits) {
+        let data = null
+        for (let i = 0; i < cartList.length; i++) {
+            if (cartList[i].id === info.id) {
+                data = cartList[i]
+                break
+            }
+        }
+        data.number++
+            data.xiaoji = data.number * data.price
+    } else {
+        //添加本条数据
+        info.number = 1
+        info.xiaoji = info.price
+        info.isSelect = false
+        cartList.push(info)
+    }
+    localStorage.setItem('cartList', JSON.stringify(cartList))
+})

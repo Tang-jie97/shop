@@ -56,7 +56,7 @@ function getList() {
 }
 
 
-
+let LIST = []
 getList2()
 
 function getList2() {
@@ -80,7 +80,7 @@ function getList2() {
                 }
             })
             bindHtml(res.slice(0, 12))
-
+            LIST = res
         }
     })
 }
@@ -91,14 +91,27 @@ function bindHtml(list) {
 
     list.forEach(item => {
         str += `
-            <li>
-            <a href="../pages/detail.html">
+            <li data-id="${item.id}">
                 <img src="${ item.url}" alt="">
                 <h3>${item.name}</h3>
                 <p>${ item.price}</p>
-                </a>
             </li>
                 `
     })
     $('.box > ul').html(str)
 }
+// let LIST = res
+$('.box>ul').on('click', 'li', function() {
+    console.log(this)
+    const id = $(this).data('id')
+    let data = null
+    for (var i = 0; i < LIST.length; i++) {
+        if (LIST[i].id === id) {
+            data = LIST[i]
+            break
+        }
+    }
+    localStorage.setItem('goodsInfo', JSON.stringify(data))
+
+    window.location.href = './detail.html'
+})

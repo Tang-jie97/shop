@@ -321,11 +321,13 @@
     .buybox {
         padding-top: 32px;
         padding-bottom: 50px;
+        height: 600px;
     }
     
     #ShowPictureBox {
         width: 560px;
         height: 560px;
+        float: left;
         position: relative;
         border: 1px solid #ccc;
     }
@@ -347,6 +349,50 @@
         background-color: #fff;
         width: 300px;
         height: 300px;
+    }
+    
+    .pay {
+        width: 300px;
+        height: 560px;
+        float: right;
+    }
+    
+    .pay h3 {
+        line-height: 1;
+        font-size: 24px;
+        font-weight: normal;
+        color: #212121;
+    }
+    
+    .pay p {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1;
+        color: #ff6700;
+    }
+    
+    .pay button {
+        width: 298px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        border: 1px solid #ff6700;
+        background: #fff;
+        color: #ff6700;
+        cursor: pointer;
+    }
+    
+    .pay button:hover {
+        background: #ff6700;
+        color: #fff;
+    }
+    
+    .btn1 {
+        margin-top: 30px;
+    }
+    
+    .btn2 {
+        margin-top: 10px;
     }
     /* footer */
     

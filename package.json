@@ -29,7 +29,7 @@
         "boostrap": "^2.0.0",
         "bootstrap": "^3.3.7",
         "gulp": "^4.0.2",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "swiper": "^5.3.1"
     }
 }
